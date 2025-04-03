@@ -1,0 +1,24 @@
+ul li{
+    list-style-type: none;
+    margin: 10px 0;
+    font-size: 20px;
+    color: red;
+    border: 2px solid red;
+    border-radius: 20px;
+}
+body{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+h1{
+    color: red;
+}
+#repeat-button{
+    color: white;
+    border: 2px solid red;
+    border-radius: 20px;
+    background-color: red;
+    cursor: pointer;
+}

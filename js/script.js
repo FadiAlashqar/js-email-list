@@ -1,17 +1,24 @@
+const emailContainer = document.getElementById('email-container');
+const repeatButton = document.getElementById('repeat-button');
 
+const repeat = () => {
 
-for (let i = 0; i < 10; i++) {
-    
-    const emailContainer = document.getElementById('email-container');
-    
-    const mails = 'https://flynn.boolean.careers/exercises/api/random/mail';
+    emailContainer.innerHTML = '';
 
-    axios.get(mails).then((resp) => {
+    for (let i = 0; i < 10; i++) {
     
-        let randomMails = resp.data.response;
-        let listElement = document.createElement('li');
-        listElement.innerText = randomMails;
-        emailContainer.appendChild(listElement);
+        const mails = 'https://flynn.boolean.careers/exercises/api/random/mail';
     
-    });
+        axios.get(mails).then((resp) => {
+        
+            let randomMails = resp.data.response;
+            let listElement = document.createElement('li');
+            listElement.innerText = randomMails;
+            emailContainer.appendChild(listElement);
+        
+        });
+    };
+
 };
+
+repeatButton.addEventListener('click', repeat);
